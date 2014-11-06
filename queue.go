@@ -223,6 +223,7 @@ func (q *Queue) Jobs(tube string) ([]*Job, error) {
 	return jobs, nil
 }
 
+// Delete removes a job
 func (j *Job) Delete() error {
 	tx, err := j.q.db.Begin()
 	if err != nil {
